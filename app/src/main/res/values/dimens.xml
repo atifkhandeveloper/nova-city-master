@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ob_desc_padding">50dp</dimen>
+    <dimen name="normal_text">18sp</dimen>
+    <dimen name="ob_banner_height">300dp</dimen>
+    <dimen name="activity_horizontal_margin">25dp</dimen>
+    <dimen name="pager_dot_size">15dp</dimen>
+
+    <dimen name="gpvch_app_icon_margin">10dp</dimen>
+    <dimen name="gpvch_tv_version_code_margin_left">5dp</dimen>
+    <dimen name="gpvch_tv_version_code_margin_right">5dp</dimen>
+    <dimen name="gpvch_tv_version_code_margin_top">10dp</dimen>
+    <dimen name="gpvch_tv_header_whats_new">5dp</dimen>
+</resources>

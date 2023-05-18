@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Nova City</string>
+    <string name="phone_num">Enter Phone Number</string>
+    <string name="signin">Start QR Code Scanner</string>
+    <string name="verify">Verify</string>
+    <string name="sec_phone_num">Enter Second Phone Number</string>
+    <string name="hideqr">Stop QR Code Scanner</string>
+    <string name="filer_verify">File Verification</string>
+    <string name="phone_formatt">Format: 03XXXXXXXXX</string>
+    <string name="pass_formatt">Format: ABCXXXXXXX</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="note">Note: →</string>
+    <string name="otp_note">Do not share your OTP with anyone. If you have not requested on OTP please</string>
+    <string name="otp_format">Format: 0000</string>
+    <string name="trade">Trade</string>
+    <string name="resend">Resend OTP</string>
+    <string name="sec_sec_code">Enter Security Code</string>
+    <string name="enter_otp">Enter OTP Code</string>
+    <string name="resend_otp">Resend OTP to new Number</string>
+    <string name="send_otp_new">Send OTP to new Number</string>
+    <string name="verify_otp">Verify OTP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="para1">All Public facilities within 05-15 minutes walk through green spine pedestrian network Green Belts situated in multiple sectors IT Park and Education Complex Neighbourhood Markaz Grand Jamia Mosque along with Sector Mosques Active Commercial Central District Open and Inviting Plaza with Ground-Level Activity</string>
+    <string name="para2"><![CDATA[For a fast track traffic flow, a 200 feet wide Signal Free Panoramic Main Boulevard has been designed that connects Nova City Pakistan to both Motorway & Chakri Road.]]></string>
+    <string name="para3">Like any of the large cities, a bypass road has been designed all around the Nova City Pakistan for the fast access to any part of the Project known as Ring Road.</string>
+    <string name="para4">Nova City Pakistan has been designed into different independent communities that all combine collectively to make  a grand master plan providing a living of its own class.</string>
+    <string name="para5">The golf community of one kanal luxury villas uplift the residential lifestyle experience with 9 holes 40 acre golf course scenic views of lush greenery and vegetation and served by ample amenities and high quality landscaping.</string>
+    <string name="para6">The ECO community of 14 Marla residential pots is a series of eco botanical gardens, birds sanctuary ponds, play fields, interactive green spaces and inviting plazas linking to the lake and golf course.</string>
+    <string name="para7">The sports and fitness community of 10 Marla luxury villas and apartments is equipped with an international cricket ground, gyms, indoor and outdoor sports complex with an Olympic size swimming pool, tennis football, basketball, cycling track, squash, gymnasium, fitness centers, spas and start of the art buggy racing track. This community can hold any international sport events with all the sporting facilities.</string>
+    <string name="para8">Nova City Pakistan provides a one stop smart solution and is equipped with one of the best medical and educational services in the area with a fully functional University, medical college, educational complexes and state of the art 500 bed hospitals and wellness center with a network of best schools and colleges functioning within the development.</string>
+    <string name="para9">The mix use community comprise of 5.5 and 8 Marla house, apartments, retail malls, commercial public and neighborhood facilities with an entertainment zone of amusement and water park the frame work is integrated with organic fruits and vegetables urban farms and markets.</string>
+    <string name="para10">CBD is the main commercial area of the Project. This zone of contemporary buildings is clustered around an open and inviting open solar park with solar tress, with activity at ground level, and awe-inspiring towers up towards the skyline of more than twenty-five stories. This unique combination of human scale and powerfully distinctive architecture provides a wonderful opportunity for this cutting edge development which attract.</string>
+    <string name="office1">Nova City Kharian, Kharian, Gujrat, Punjab, Pakistan</string>
+    <string name="office2">Nova City Kharian, Kharian, Gujrat, Punjab, Pakistan  +92 346 5407267</string>
+    <string name="contact1">UAN: +92 346 5407267</string>
+    <string name="contact2">Tell: +92 346 5407267</string>
+    <string name="contact3">Ph: +92 346 5407267</string>
+    <string name="contact4">Email : info@dreamcity.pk</string>
+    <string name="txt_skip">Skip</string>
+    <string name="txt_next">Next</string>
+    <string name="ob_get_started">Get Started</string>
+    <string name="ob_header1">Welcome</string>
+    <string name="ob_desc1">Pakistan\'s First Eco-Sustainable City With Smart Progression The Most Desirable Place To Live In Pakistan!</string>
+    <string name="ob_header2">Quality of Work</string>
+    <string name="ob_desc2">In view of growing housing demand in the twin cities, Nova City Pakistan intends to build a quality housing project on M2 Motorway near New Islamabad International Airport.</string>
+    <string name="ob_header3">WHO WE ARE</string>
+    <string name="ob_desc3">A unique combination of seasoned Land Owners and well-established Developers that bring forth a comprehensive expansion of vibrant, sustainable, smart and green housing lifestyle, providing a range of Residential, Commercial and Resort Living Facilities set in the lush green haven of the Capital Islamabad City’s luxuriance, served with plenteous high-end amenities and futuristic infrastructure.</string>
+
+
+    <string name="gpvch_header">New version is available!</string>
+    <string name="gpvch_button_positive">Update current version</string>
+    <string name="gpvch_button_negative">Remind me later</string>
+    <string name="gpvch_new_version_info_title">Whats new:</string>
+    <string name="restart">Restart</string>
+</resources>

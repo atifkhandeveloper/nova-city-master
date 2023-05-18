@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".Fragments.TransferFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingBottom="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/verify_otp_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="btn_verify,btn_trade" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/verify_otp2_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="username2_layout,textView7" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="250dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="75dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="@string/filer_verify"
+                    android:textAllCaps="false"
+                    android:textColor="@color/golden"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/phone_num"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scan_result">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:textColorHint="@color/golden"
+                        android:inputType="number"
+                        android:letterSpacing="0.05"
+                        android:hint="Enter Phone Number"
+                        android:textColor="@color/golden"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/phone_formatt"
+                    android:textColor="@color/golden"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/username_layout" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/ic_baseline_qr_code_scanner_24"
+                    android:translationZ="1dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/qrlayout"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/qrlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                    <com.gpfreetech.awesomescanner.ui.ScannerView
+                        android:id="@+id/scanner_view"
+                        android:layout_width="350dp"
+                        android:layout_height="350dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="gone"
+                        app:autoFocusButtonColor="@color/golden"
+                        app:autoFocusButtonVisible="true"
+                        app:flashButtonColor="@color/golden"
+                        app:flashButtonVisible="true"
+                        app:frameAspectRatioHeight="1"
+                        app:frameAspectRatioWidth="1"
+                        app:frameColor="@color/golden"
+                        app:frameCornersRadius="0dp"
+                        app:frameCornersSize="50dp"
+                        app:frameSize="0.70"
+                        app:frameThickness="5dp"
+                        app:isAnimated="true"
+                        app:maskColor="#77000000" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_startScanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="20sp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/button_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/signin"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/scan_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingTop="20dp"
+                    android:singleLine="false"
+                    android:textColor="@color/golden"
+                    android:textIsSelectable="true"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qrlayout" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_send_otp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/send_otp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_verify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/verify"
+                    android:textColorHint="@color/golden"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_send_otp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_trade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/trade"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_verify" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/second_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/sec_sec_code"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    android:textColor="@color/golden"
+                    android:textColorHint="@color/golden"
+                    app:hintTextColor="@color/golden"
+                    android:clickable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:enabled="true"
+                        android:textColorHint="@color/golden"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="none"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/golden"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pass_formatt"
+                    android:textColor="@color/golden"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/second_layout" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/third_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/enter_otp"
+                    android:visibility="gone"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/golden"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_verifyotp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="number"
+                        android:textColorHint="@color/golden"
+                        android:imeOptions="actionDone"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/golden"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/otp_format"
+                    android:textColor="@color/golden"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/third_layout" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fourth_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/enter_otp"
+                    android:visibility="gone"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    android:textColor="@color/golden"
+                    app:hintTextColor="@color/golden"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_verifyotp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="number"
+                        android:textColorHint="@color/golden"
+                        android:imeOptions="actionDone"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/golden"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/otp_format"
+                    android:textColor="@color/golden"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/fourth_layout" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username2_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:hint="@string/phone_num"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    android:textColorHint="@color/golden"
+                    app:hintTextColor="@color/golden"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phoneNumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="number"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/golden"
+                        android:textColorHint="@color/golden"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/phone_formatt"
+                    android:textColor="@color/golden"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/username2_layout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/black"
+            android:gravity="start"
+            android:text="@string/note"
+            android:textColor="@color/golden"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/black"
+            android:gravity="start"
+            android:letterSpacing="0.05"
+            android:text="@string/otp_note"
+            android:textColor="@color/golden"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

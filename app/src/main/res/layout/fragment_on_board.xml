@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_footer"
+            android:background="@color/golden"/>
+
+
+        <LinearLayout
+            android:id="@+id/ll_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:id="@+id/btn_onborads"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:id="@+id/viewPagerCountDots"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/btn_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/txt_skip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/golden"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="@string/txt_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/golden"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_enabled_onboard"
+                android:fontFamily="sans-serif"
+                android:padding="10dp"
+                android:text="@string/ob_get_started"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+            <!--        <Button-->
+            <!--            android:id="@+id/btn_get_started"-->
+            <!--            style="?android:attr/borderlessButtonStyle"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="50dp"-->
+            <!--            android:background="@color/purple_500"-->
+            <!--            android:text="@string/ob_get_started"-->
+            <!--            android:textAllCaps="false"-->
+            <!--            android:textColor="@color/white"-->
+            <!--            android:textSize="@dimen/button_text"-->
+            <!--            android:visibility="gone" />-->
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>
